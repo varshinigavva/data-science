@@ -1,0 +1,48 @@
+# 📈 Stock Price Analysis using Python
+
+## Step 1: Install Required Libraries
+
+```python
+pip install yfinance pandas numpy matplotlib seaborn
+```
+
+## Step 2: Import Libraries
+
+```python
+import yfinance as yf
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+## Step 3: Download Stock Data
+
+```python
+stock = yf.download('AAPL', start='2023-01-01', end='2025-01-01')
+print(stock.head())
+```
+
+## Step 4: Data Exploration
+
+```python
+print(stock.info())
+print(stock.describe())
+print(stock.isnull().sum())
+```
+
+## Step 5: Data Visualization
+
+```python
+plt.figure(figsize=(12,6))
+plt.plot(stock['Close'])
+plt.title('Apple Stock Closing Price')
+plt.show()
+```
+
+## Conclusion
+
+- Identified stock price trends.
+- Analyzed daily returns and volatility.
+- Applied EDA and visualization techniques.
+- Generated insights from real-world financial data.
